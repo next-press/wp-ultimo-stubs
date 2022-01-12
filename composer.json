@@ -1,0 +1,28 @@
+{
+    "name": "next-press/wp-ultimo-stubs",
+    "version": "1.0.0",
+    "homepage": "https://wpultimo.com",
+    "description": "WP Ultimo stubs for easier development",
+    "type": "library",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Arindo Duque",
+            "email": "arindo@wpultimo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev": {
+        "giacocorsiglia/stubs-generator": "^0.5.0",
+        "next-press/wp-ultimo": "*"
+    },
+    "scripts": {
+        "post-install-cmd": "@composer --working-dir=source/ update --no-interaction --no-suggest",
+        "post-update-cmd": "@composer --working-dir=source/ update --no-interaction --no-suggest",
+        "cleanup": "git status --short --ignored | sed -n -e 's#^!! ##p' | xargs -r rm -vrf"
+    },
+    "scripts-descriptions": {
+        "cleanup": "Remove all ignored files."
+    }
+}

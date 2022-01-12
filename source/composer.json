@@ -1,0 +1,37 @@
+{
+  "require": {
+    "php": "~7.1",
+    "ext-gettext": "*",
+    "ext-hash": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "ext-openssl": "*",
+    "composer/installers": "~1.0",
+    "next-press/wp-ultimo": "*"
+  },
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "next-press/wp-ultimo",
+        "type": "wordpress-plugin",
+        "version": "2",
+        "dist": {
+          "url": "https://versions.nextpress.co/updates/?action=download&slug=wp-ultimo&license_key={%WP_ULTIMO_KEY}&beta_program=2",
+          "type": "zip"
+        },
+        "require": {
+          "ffraenz/private-composer-installer": "^5.0"
+        }
+      }
+    }
+  ],
+  "minimum-stability": "dev",
+  "extra": {
+    "installer-paths": {
+      "{$name}/": [
+        "next-press/wp-ultimo"
+      ]
+    }
+  }
+}
